@@ -9,10 +9,487 @@
 <meta property="og:title" content="Anında Elektrik — Sigorta mı attı? 7/24 kapınızdayız.">
 <meta property="og:description" content="Ankara genelinde 7/24 acil elektrikçi hizmeti. Sigortalı ustalar, ortalama 22 dakikada yanınızda.">
 <meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230A0F1C'/%3E%3Cpath d='M55 15 L28 55 H46 L40 85 L74 42 H54 Z' fill='%23FFB020'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght=500;600;700&family=Inter:wght=400;500;600;700&family=JetBrains+Mono:wght=500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "name": "Anında Elektrik",
+  "telephone": "+905541373706",
+  "areaServed": "Ankara",
+  "openingHours": "Mo-Su 00:00-23:59",
+  "priceRange": "$$",
+  "url": "https://anindaelektrik.com.tr"
+}
+</script>
+<style>
+  :root{
+    --ink:#0A0F1C;
+    --ink-2:#121a2b;
+    --paper:#EEF2F3;
+    --paper-2:#FFFFFF;
+    --text:#12161C;
+    --text-soft:#4A5568;
+    --amber:#FFB020;
+    --amber-2:#FFCB66;
+    --danger:#E23B33;
+    --danger-2:#FF5A4E;
+    --circuit:#2F80ED;
+    --line:#DDE3E5;
+    --radius:14px;
+    --shadow:0 10px 30px rgba(10,15,28,.12);
+    --disp:'Space Grotesk',sans-serif;
+    --body:'Inter',sans-serif;
+    --mono:'JetBrains Mono',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--body);
+    color:var(--text);
+    background:var(--paper);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:74px;
+  }
+  img,svg{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .container{max-width:1040px;margin:0 auto;padding:0 20px}
+  h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.15;letter-spacing:-.01em}
+  .eyebrow{
+    font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--amber);display:inline-flex;align-items:center;gap:8px;
+  }
+  .eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 4px rgba(255,176,32,.25)}
+  section{padding:56px 0}
+  @media(min-width:768px){section{padding:88px 0}}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:40;background:rgba(10,15,28,.92);backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1040px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:9px;font-family:var(--disp);font-weight:700;color:#fff;font-size:17px}
+  .brand-bolt{width:26px;height:26px;flex:none}
+  .header-call{
+    display:flex;align-items:center;gap:8px;background:var(--danger);color:#fff;
+    padding:9px 14px;border-radius:999px;font-weight:700;font-size:14px;font-family:var(--body);
+    box-shadow:0 4px 14px rgba(226,59,51,.4);
+  }
+  .header-call span.num{font-family:var(--mono)}
+  @media(max-width:480px){.header-call span.txt{display:none}}
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:radial-gradient(120% 100% at 50% 0%, #17203a 0%, var(--ink) 55%, #060910 100%);
+    color:#fff;padding:44px 0 40px;position:relative;overflow:hidden;
+  }
+  .hero .container{display:block;}
+  .hero h1{font-size:32px;margin:14px 0 14px;color:#fff}
+  .hero h1 .hl{color:var(--amber)}
+  @media(min-width:640px){.hero h1{font-size:42px}}
+  .hero p.lead{color:#C6CCDA;font-size:16px;max-width:52ch;margin-bottom:22px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:22px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    font-family:var(--body);font-weight:700;font-size:15.5px;border-radius:12px;
+    padding:15px 22px;border:none;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease;
+    white-space:nowrap;
+  }
+  .btn:active{transform:scale(.97)}
+  .btn-call{
+    background:linear-gradient(180deg,var(--danger-2),var(--danger));color:#fff;
+    box-shadow:0 10px 24px rgba(226,59,51,.45);animation:pulse-ring 2.4s ease-in-out infinite;
+  }
+  .btn-call .num{font-family:var(--mono);font-weight:700}
+  .btn-wa{background:#fff;color:var(--ink);box-shadow:var(--shadow)}
+  @keyframes pulse-ring{
+    0%,100%{box-shadow:0 10px 24px rgba(226,59,51,.45)}
+    50%{box-shadow:0 10px 24px rgba(226,59,51,.45),0 0 0 8px rgba(226,59,51,.12)}
+  }
+  .trust-row{display:flex;flex-wrap:wrap;gap:10px}
+  .trust-pill{
+    display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.12);padding:8px 13px;border-radius:999px;font-size:12.5px;color:#DCE1EA;
+  }
+  .trust-pill svg{width:14px;height:14px;color:var(--amber)}
+
+  /* ---------- diagnostic chips ---------- */
+  .diag-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:36px}
+  @media(min-width:640px){.diag-grid{grid-template-columns:repeat(4,1fr)}}
+  .diag-chip{
+    background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+    padding:16px 14px;text-align:center;font-size:13.5px;font-weight:600;color:var(--text);
+  }
+  .diag-chip svg{width:22px;height:22px;margin:0 auto 8px;color:var(--danger)}
+
+  /* ---------- section headers ---------- */
+  .sec-head{max-width:60ch;margin-bottom:32px}
+  .sec-head h2{font-size:26px;margin-top:10px}
+  @media(min-width:640px){.sec-head h2{font-size:32px}}
+  .sec-head p{color:var(--text-soft);margin-top:10px;font-size:15px}
+
+  /* ---------- services ---------- */
+  .svc-grid{display:grid;grid-template-columns:1fr;gap:14px}
+  @media(min-width:640px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:960px){.svc-grid{grid-template-columns:repeat(4,1fr)}}
+  .svc-card{
+    background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px;transition:transform .15s ease,box-shadow .15s ease;
+  }
+  .svc-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .svc-card .ic{
+    width:40px;height:40px;border-radius:10px;background:#FFF3DC;display:flex;
+    align-items:center;justify-content:center;margin-bottom:12px;
+  }
+  .svc-card .ic svg{width:20px;height:20px;color:#B8720A}
+  .svc-card h3{font-size:15.5px;margin-bottom:5px}
+  .svc-card p{font-size:13px;color:var(--text-soft)}
+
+  /* ---------- process ---------- */
+  .process{background:var(--ink);color:#fff}
+  .process .sec-head p{color:#9AA4B8}
+  .proc-grid{display:grid;grid-template-columns:1fr;gap:20px}
+  @media(min-width:768px){.proc-grid{grid-template-columns:repeat(3,1fr)}}
+  .proc-step{position:relative;padding:24px 20px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:var(--radius)}
+  .proc-step .n{font-family:var(--mono);font-weight:700;color:var(--amber);font-size:13px;letter-spacing:.08em}
+  .proc-step h3{font-size:18px;margin:10px 0 6px;color:#fff}
+  .proc-step p{font-size:14px;color:#AEB6C6}
+
+  /* ---------- stats ---------- */
+  .stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  @media(min-width:768px){.stats-grid{grid-template-columns:repeat(4,1fr)}}
+  .stat{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:22px 16px;text-align:center}
+  .stat .num{font-family:var(--mono);font-weight:700;font-size:30px;color:var(--circuit)}
+  .stat .lbl{font-size:12.5px;color:var(--text-soft);margin-top:4px}
+
+  /* ---------- areas ---------- */
+  .area-chips{display:flex;flex-wrap:wrap;gap:9px}
+  .area-chip{
+    background:var(--paper-2);border:1px solid var(--line);padding:8px 14px;border-radius:999px;
+    font-size:13.5px;font-weight:600;
+  }
+
+  /* ---------- testimonials ---------- */
+  .test-grid{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:768px){.test-grid{grid-template-columns:repeat(3,1fr)}}
+  .test-card{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+  .stars{color:var(--amber);font-size:14px;margin-bottom:10px;letter-spacing:2px}
+  .test-card p.quote{font-size:14px;color:var(--text);margin-bottom:14px}
+  .test-card .who{font-size:12.5px;color:var(--text-soft);font-weight:600}
+
+  /* ---------- faq ---------- */
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-q{
+    width:100%;text-align:left;background:none;border:none;padding:18px 0;
+    display:flex;justify-content:space-between;align-items:center;gap:12px;
+    font-family:var(--body);font-weight:600;font-size:15.5px;cursor:pointer;color:var(--text);
+  }
+  .faq-q .plus{font-family:var(--mono);font-size:20px;color:var(--circuit);transition:transform .2s ease;flex:none}
+  .faq-item.open .plus{transform:rotate(45deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+  .faq-a p{padding-bottom:18px;font-size:14px;color:var(--text-soft);max-width:65ch}
+
+  /* ---------- final cta ---------- */
+  .final-cta{
+    background:radial-gradient(120% 140% at 50% 0%, #1a2340 0%, var(--ink) 60%);color:#fff;text-align:center;
+  }
+  .final-cta h2{font-size:26px;margin-bottom:10px}
+  @media(min-width:640px){.final-cta h2{font-size:34px}}
+  .final-cta p{color:#B7BFCF;margin-bottom:26px;font-size:15px}
+  .final-cta .cta-row{justify-content:center}
+
+  /* ---------- footer ---------- */
+  footer{background:#060910;color:#7C8798;padding:34px 0;font-size:13px}
+  footer .container{display:flex;flex-direction:column;gap:14px}
+  @media(min-width:640px){footer .container{flex-direction:row;justify-content:space-between;align-items:center}}
+  footer .fbrand{color:#DCE1EA;font-family:var(--disp);font-weight:600;font-size:14px}
+  footer a.flink{color:#9AA4B8}
+  footer a.flink:hover{color:var(--amber)}
+
+  /* ---------- sticky mobile bar ---------- */
+  .mobile-bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:1px;
+    background:var(--line);box-shadow:0 -6px 20px rgba(0,0,0,.15);
+    transform:translateY(0);transition:transform .25s ease;
+  }
+  .mobile-bar a{
+    flex:1;display:flex;align-items:center;justify-content:center;gap:8px;
+    padding:15px 10px;font-weight:700;font-size:14.5px;font-family:var(--body);
+  }
+  .mobile-bar a.call{background:var(--danger);color:#fff}
+  .mobile-bar a.wa{background:#25D366;color:#06210F}
+  .mobile-bar svg{width:18px;height:18px}
+  @media(min-width:860px){.mobile-bar{display:none}}
+  body{padding-bottom:70px}
+  @media(min-width:860px){body{padding-bottom:0}}
+
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+  @media(prefers-reduced-motion:reduce){
+    *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
+  }
+</style>
 </head>
 <body>
 
-<center><h1>ANINDA ELEKTRİK</h1></center>
+<header>
+  <div class="nav">
+    <a href="#top" class="brand">
+      <svg class="brand-bolt" viewBox="0 0 100 100" fill="none"><path d="M55 8 L22 56 H44 L37 92 L78 40 H52 Z" fill="#FFB020"/></svg>
+      Anında Elektrik
+    </a>
+    <a href="tel:+905541373706" class="header-call" data-track="header_call">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.79.64 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.21a2 2 0 0 1 2.11-.45c.86.3 1.75.52 2.65.64A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="txt">Ara:</span> <span class="num">0554 137 37 06</span>
+    </a>
+  </div>
+</header>
 
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" style="padding-top:44px">
+    <div class="container">
+      <div>
+        <span class="eyebrow"> 7/24 Acil Elektrikçi</span>
+        <h1>Sigorta mı attı? <span class="hl">Anında Elektrik</span> geliyor.</h1>
+        <p class="lead">Elektrik kesildi, kıvılcım gördünüz ya da priz yanıyor — telefonu açın yeter. Sigortalı ustalarımız Ankara genelinde ortalama 22 dakikada kapınızda.</p>
+        <div class="cta-row">
+          <a href="tel:+905541373706" class="btn btn-call" data-track="hero_call">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.79.64 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.21a2 2 0 0 1 2.11-.45c.86.3 1.75.52 2.65.64A2 2 0 0 1 22 16.92z"/></svg>
+            Hemen Ara — <span class="num">0554 137 37 06</span>
+          </a>
+          <a href="https://wa.me/905541373706" class="btn btn-wa" data-track="hero_whatsapp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.77.46 3.45 1.34 4.95L2 22l5.29-1.39a9.87 9.87 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg>
+            WhatsApp'tan Yaz
+          </a>
+        </div>
+        <div class="trust-row">
+          <span class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2 3 6v6c0 5 3.8 8.7 9 10 5.2-1.3 9-5 9-10V6l-9-4Z"/></svg>%100 Çözüm</span>
+          <span class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>500+ Tamamlanan İş</span>
+          <span class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Ort. 22 Dakika</span>
+          <span class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2 3 6v6c0 5 3.8 8.7 9 10 5.2-1.3 9-5 9-10V6l-9-4Z"/></svg>12 Yıllık Tecrübe</span>
+          <span class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2 3 6v6c0 5 3.8 8.7 9 10 5.2-1.3 9-5 9-10V6l-9-4Z"/></svg>İşinin Uzmanı Ustalar</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="diag-grid">
+         <div class="diag-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6Z"/></svg>Sigorta Arızası</div>
+         <div class="diag-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>Kaçak Akım</div>
+         <div class="diag-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6Z"/><circle cx="18" cy="6" r="2"/></svg>Kısa Devre</div>
+         <div class="diag-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V11a3 3 0 0 1 6 0v6"/></svg>Şalter Sorunları</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="hizmetler">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow" style="color:#B8720A">Hizmetlerimiz</span>
+        <h2>Evde ya da işyerinde, ne olursa olsun.</h2>
+        <p>Tek seferlik acil müdahaleden düzenli bakıma kadar, elektrik tesisatınızın her ihtiyacı için tek adres.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6Z"/></svg></div><h3>Sigorta Arızası</h3><p>Atan sigortanın kök nedenini bulur, kalıcı çözer.</p></div>
+        <div class="svc-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><h3>Kaçak Akım Rölesi</h3><p>Sürekli atan kaçak röle testi ve değişimi.</p></div>
+        <div class="svc-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h.01M15 15h.01"/></svg></div><h3>Priz / Anahtar Tamiri</h3><p>Kıvılcım yapan, ısınan ya da çalışmayan priz ve anahtarlar.</p></div>
+        <div class="svc-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h3"/></svg></div><h3>Pano Yenileme</h3><p>Eski, standart dışı panoların güvenli hale getirilmesi.</p></div>
+        <div class="svc-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="8" width="18" height="10" rx="2"/><path d="M7 8V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg></div><h3>Sayaç Arızası</h3><p>Sayaç önü/sonrası arıza tespiti ve yönlendirme.</p></div>
+        <div class="svc-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v6M12 16v6M4.9 4.9l4.2 4.2M14.9 14.9l4.2 4.2M2 12h6M16 12h6M4.9 19.1l4.2-4.2M14.9 9.1l4.2-4.2"/></svg></div><h3>Topraklama</h3><p>Topraklama kontrolü ve standartlara uygun tesisat.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Nasıl Çalışıyoruz</span>
+        <h2>Aradığınız andan çözüme, 3 adım.</h2>
+      </div>
+      <div class="proc-grid">
+        <div class="proc-step"><div class="n">ADIM 01</div><h3>Arayın ya da yazın</h3><p>Telefonla anlatın ya da WhatsApp'tan fotoğraf gönderin, ilk teşhis hemen başlar.</p></div>
+        <div class="proc-step"><div class="n">ADIM 02</div><h3>En yakın usta yönlendirilir</h3><p>Bulunduğunuz konuma en yakın sigortalı ustamız yola çıkar.</p></div>
+        <div class="proc-step"><div class="n">ADIM 03</div><h3>Yerinde çözüm</h3><p>Arıza tespit edilir, net fiyat onayınızla iş tamamlanır.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section>
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat"><div class="num" data-count="12">0</div><div class="lbl">Yıllık Tecrübe</div></div>
+        <div class="stat"><div class="num" data-count="500">0</div><div class="lbl">Tamamlanan İş</div></div>
+        <div class="stat"><div class="num" data-count="22">0</div><div class="lbl">Ort. Varış (dk)</div></div>
+        <div class="stat"><div class="num" data-count="98">0</div><div class="lbl">% Memnuniyet</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AREAS -->
+  <section>
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow" style="color:#B8720A">Hizmet Bölgeleri</span>
+        <h2>Ankara'nın her yerinde yanınızdayız.</h2>
+      </div>
+      <div class="area-chips">
+        <span class="area-chip">Çankaya</span><span class="area-chip">Keçiören</span><span class="area-chip">Etlik</span><span class="area-chip">Yenimahalle</span>
+        <span class="area-chip">Çayyolu</span><span class="area-chip">Yaşamkent</span><span class="area-chip">Altındağ</span>
+        <span class="area-chip">Mamak</span><span class="area-chip">Etimesgut</span><span class="area-chip">Sincan</span>
+        <span class="area-chip">Eryaman</span><span class="area-chip">Batıkent</span><span class="area-chip">Şentepe</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="yorumlar">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow" style="color:#B8720A">Müşteri Yorumları</span>
+        <h2>Komşularınız ne diyor?</h2>
+      </div>
+      <div class="test-grid">
+        <div class="test-card"><div class="stars">★★★★★</div><p class="quote">Gece 1'de sigortamız attı, 20 dakikada geldiler. Sorunu anlatarak çözdüler, fiyat da makuldü.</p><div class="who">Elif Y. — Çankaya</div></div>
+        <div class="test-card"><div class="stars">★★★★★</div><p class="quote">Priz sürekli ısınıyordu, tehlikeli olduğunu söylediler ve aynı gün değiştirdiler.</p><div class="who">Hüseyin K. — Keçiören</div></div>
+        <div class="test-card"><div class="stars">★★★★★</div><p class="quote">Binamızda şalter sürekli atıyordu, ustamız gelip halletti. Teşekkürler.</p><div class="who">Ayhan A. — Yenimahalle</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="sss">
+    <div class="container" style="max-width:760px">
+      <div class="sec-head">
+        <span class="eyebrow" style="color:#B8720A">Sıkça Sorulanlar</span>
+        <h2>Aklınıza takılanlar</h2>
+      </div>
+      <div id="faqList">
+        <div class="faq-item">
+          <button class="faq-q">Gece geç saatte de gelir misiniz? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Evet, 7/24 hizmet veriyoruz. Hafta sonu ve resmi tatiller dahil, gece dahil her saat arayabilirsiniz.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Ücretlendirme nasıl işliyor? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Usta yerinde arızayı tespit ettikten sonra net fiyatı söyler, onayınız olmadan işleme başlanmaz.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Sigortam sık sık atıyor, tehlikeli mi? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Sık atma genelde aşırı yüklenme ya da kaçak akımın belirtisidir. Kontrol ettirmeden kullanmaya devam etmek risklidir, en kısa sürede baktırmanızı öneririz.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Ne kadar sürede gelirsiniz? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Ankara genelinde ortalama varış süremiz 22 dakikadır, bölgeye ve trafiğe göre değişebilir.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Malzeme ve parça sizde mevcut mu? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Ustalarımızın aracında en sık kullanılan sigorta, priz, anahtar ve kablo malzemeleri hazır bulunur.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <span class="eyebrow">7/24 Acil Hat</span>
+      <h2>Sigorta mı attı? Anında Elektrik, hemen yola çıkıyor.</h2>
+      <p>Telefonu açın, adresi söyleyin — gerisini bize bırakın.</p>
+      <div class="cta-row">
+        <a href="tel:+905541373706" class="btn btn-call" data-track="final_call">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.79.64 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.21a2 2 0 0 1 2.11-.45c.86.3 1.75.52 2.65.64A2 2 0 0 1 22 16.92z"/></svg>
+          Hemen Ara — <span class="num">0554 137 37 06</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div>
+      <div class="fbrand">Anında Elektrik</div>
+      <div>Ankara geneli · 7/24 acil elektrikçi hizmeti</div>
+    </div>
+    <div style="display:flex;gap:18px;flex-wrap:wrap">
+      <a class="flink" href="tel:+905541373706">0554 137 37 06</a>
+      <a class="flink" href="https://wa.me/905541373706">WhatsApp</a>
+      <a class="flink" href="#hizmetler">Hizmetler</a>
+      <a class="flink" href="#sss">SSS</a>
+    </div>
+  </div>
+</footer>
+
+<!-- mobile sticky call bar -->
+<div class="mobile-bar" id="mobileBar">
+  <a href="tel:+905541373706" class="call" data-track="sticky_call">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.79.64 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.21a2 2 0 0 1 2.11-.45c.86.3 1.75.52 2.65.64A2 2 0 0 1 22 16.92z"/></svg>
+    Hemen Ara
+  </a>
+  <a href="https://wa.me/905541373706" class="wa" data-track="sticky_whatsapp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.77.46 3.45 1.34 4.95L2 22l5.29-1.39a9.87 9.87 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(o){
+        o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){ item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
+    });
+  });
+
+  // stat counters on scroll into view
+  var counted = false;
+  var statEls = document.querySelectorAll('.stat .num');
+  function animateCounters(){
+    if(counted) return; counted = true;
+    statEls.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-count'), 10);
+      var start = 0, duration = 900, startTime = null;
+      function step(ts){
+        if(!startTime) startTime = ts;
+        var progress = Math.min((ts - startTime) / duration, 1);
+        el.textContent = Math.floor(progress * target);
+        if(progress < 1) requestAnimationFrame(step); else el.textContent = target;
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  if('IntersectionObserver' in window){
+    var statsSection = document.querySelector('.stats-grid');
+    if(statsSection){
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if(e.isIntersecting) animateCounters(); });
+      }, {threshold:.4});
+      io.observe(statsSection);
+    }
+  } else { animateCounters(); }
+
+  // Google Ads click-to-call conversion tracking hook (placeholder)
+  document.querySelectorAll('[data-track]').forEach(function(el){
+    el.addEventListener('click', function(){
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', { 'send_to': 'AW-XXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXX' });
+      }
+    });
+  });
+</script>
 </body>
 </html>
