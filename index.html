@@ -111,9 +111,10 @@
   }
   .btn-call .num{font-family:var(--mono);font-weight:700}
   .btn-wa{background:#fff;color:var(--ink);box-shadow:var(--shadow)}
-  @keyframes pulse-ring{
-    0%,100%{box-shadow:0 10px 24px rgba(226,59,51,.45)}
-    50%{box-shadow:0 10px 24px rgba(226,59,51,.45),0 0 0 8px rgba(226,59,51,.12)}
+  @keyframes pulse-ring {
+    0% { transform: scale(1); box-shadow: 0 10px 24px rgba(226,59,51,0.45); }
+    50% { transform: scale(1.02); box-shadow: 0 10px 30px rgba(226,59,51,0.6); }
+    100% { transform: scale(1); box-shadow: 0 10px 24px rgba(226,59,51,0.45); }
   }
   .trust-row{display:flex;flex-wrap:wrap;gap:10px}
   .trust-pill{
